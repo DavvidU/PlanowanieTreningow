@@ -1,0 +1,23 @@
+<section class="DaneOsobyCwiczacej">
+    <h3>{{id}}. {{imie}} {{nazwisko}}</h3>
+    <p>Wzrost: {{wzrost}}</p>
+    <p>Waga: {{waga}}</p>
+    <p>Wiek: {{wiek}}</p>
+    <p>Płeć: {{plec}}</p>
+    <div>Przeciwwskazania:
+        <ul>
+            <li *ngFor="let przeciwwskazanie of przeciwwskazania">
+                {{przeciwwskazanie}}
+            </li>
+        </ul>
+    </div>
+    <p>Poziom treningowy: {{poziomTreningowy}}</p>
+    <p>Cel: {{cel}}</p>
+    <div>Wymiary ciala w cm:
+        <ul>
+            <li *ngFor="let wymiar of wymiaryCialaWCM">
+                {{wymiar}}
+            </li>
+        </ul>
+    </div>
+</section>

@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
 import { HomeComponent } from './home/home.component';
+import { OsobaCwiczacaComponent } from './osoba-cwiczaca/osoba-cwiczaca.component';
+
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [HomeComponent, CommonModule, RouterOutlet],
+  imports: [OsobaCwiczacaComponent ,HomeComponent, CommonModule, RouterOutlet],
   template: `
     <main>
       <header class="brand-name">
@@ -14,6 +16,9 @@ import { RouterOutlet } from '@angular/router';
       </header>
       <section class="content">
         <app-home></app-home>
+      </section>
+      <section class="osoba">
+        <app-osoba-cwiczaca></app-osoba-cwiczaca>
       </section>
     </main>
   `,
