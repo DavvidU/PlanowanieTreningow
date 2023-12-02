@@ -1,0 +1,42 @@
+<section class="Lista osob cwiczacych">
+    <div>
+        <ul>
+            <li *ngFor="let osobaNaLiscie of listaOsobCwiczacych; index as i" (click)="select(i)" [class.selected]="i === wybranaOsoba">
+                <section class="DaneOsobyCwiczacej">
+                    <h3>{{osobaNaLiscie.id}}. {{osobaNaLiscie.imie}} {{osobaNaLiscie.nazwisko}}</h3>
+                    <p>Wzrost: {{osobaNaLiscie.wzrost}}</p>
+                    <p>Waga: {{osobaNaLiscie.waga}}</p>
+                    <p>Wiek: {{osobaNaLiscie.wiek}}</p>
+                    <p>Płeć: {{osobaNaLiscie.plec}}</p>
+                    <div>Przeciwwskazania:
+                        <ul>
+                            <li *ngFor="let przeciwwskazanie of osobaNaLiscie.przeciwwskazania">
+                                {{przeciwwskazanie}}
+                            </li>
+                        </ul>
+                    </div>
+                    <p>Poziom treningowy: {{osobaNaLiscie.poziomTreningowy}}</p>
+                    <p>Cel: {{osobaNaLiscie.cel}}</p>
+                    <div>Wymiary ciala w cm:
+                        <ul> 
+                            <li *ngFor="let wymiar of osobaNaLiscie.wymiaryCialaWCM">
+                                {{wymiar}}
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                
+               
+            </li>
+        </ul>
+    </div>
+</section>
+
+<section *ngIf="wybranaOsoba > -1">
+    <h2>Wybrano osobe:</h2>
+    <div>
+        <label>
+            {{listaOsobCwiczacych[wybranaOsoba].id}}. {{listaOsobCwiczacych[wybranaOsoba].imie}} {{listaOsobCwiczacych[wybranaOsoba].nazwisko}}
+        </label>
+    </div>
+</section>

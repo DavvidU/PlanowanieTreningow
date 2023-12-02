@@ -1,32 +1,33 @@
+<!-- Ten kod chyba niepotrzebny-->
 <section class="DaneOsobyCwiczacej">
-    <h3>{{id}}. {{imie}} {{nazwisko}}</h3>
-    <p>Wzrost: {{wzrost}}</p>
-    <p>Waga: {{waga}}</p>
-    <p>Wiek: {{wiek}}</p>
-    <p>Płeć: {{plec}}</p>
+    <h3>{{osobaCwiczaca.id}}. {{osobaCwiczaca.imie}} {{osobaCwiczaca.nazwisko}}</h3>
+    <p>Wzrost: {{osobaCwiczaca.wzrost}}</p>
+    <p>Waga: {{osobaCwiczaca.waga}}</p>
+    <p>Wiek: {{osobaCwiczaca.wiek}}</p>
+    <p>Płeć: {{osobaCwiczaca.plec}}</p>
     <div>Przeciwwskazania:
         <ul>
-            <li *ngFor="let przeciwwskazanie of przeciwwskazania">
+            <li *ngFor="let przeciwwskazanie of osobaCwiczaca.przeciwwskazania">
                 {{przeciwwskazanie}}
             </li>
         </ul>
     </div>
-    <p>Poziom treningowy: {{poziomTreningowy}}</p>
-    <p>Cel: {{cel}}</p>
+    <p>Poziom treningowy: {{osobaCwiczaca.poziomTreningowy}}</p>
+    <p>Cel: {{osobaCwiczaca.cel}}</p>
     <div>Wymiary ciala w cm:
         <ul>
-            <li *ngFor="let wymiar of wymiaryCialaWCM;index as i" (click)="select(i)" [class.selected]="i === selected">
+            <li *ngFor="let wymiar of osobaCwiczaca.wymiaryCialaWCM;index as i" (click)="select(i)" [class.selected]="i === osobaCwiczaca.selected">
                 {{wymiar}}
             </li>
         </ul>
     </div>
 </section>
 
-<section *ngIf="selected > -1">
+<section *ngIf="osobaCwiczaca.selected > -1">
     <h2>Edit:</h2>
     <div>
         <label>Wymiar:
-            <input [(ngModel)]="wymiaryCialaWCM[selected]"/>
+            <input [(ngModel)]="osobaCwiczaca.wymiaryCialaWCM[osobaCwiczaca.selected]"/>
             <button (click)="save()">Save</button>
         </label>
     </div>

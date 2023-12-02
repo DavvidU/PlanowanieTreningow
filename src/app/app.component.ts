@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { HomeComponent } from './home/home.component';
-import { OsobaCwiczacaComponent } from './osoba-cwiczaca/osoba-cwiczaca.component';
+import { ListaOsobCwiczacychComponent } from './lista-osob-cwiczacych/lista-osob-cwiczacych.component';
 
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
@@ -8,7 +8,7 @@ import { RouterOutlet } from '@angular/router';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [OsobaCwiczacaComponent ,HomeComponent, CommonModule, RouterOutlet],
+  imports: [ListaOsobCwiczacychComponent ,HomeComponent, CommonModule, RouterOutlet],
   template: `
     <main>
       <header class="brand-name">
@@ -17,8 +17,8 @@ import { RouterOutlet } from '@angular/router';
       <section class="content">
         <app-home></app-home>
       </section>
-      <section class="osoba">
-        <app-osoba-cwiczaca></app-osoba-cwiczaca>
+      <section class="osobyCwiczace">
+        <app-lista-osob-cwiczacych></app-lista-osob-cwiczacych>
       </section>
     </main>
   `,
