@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';  //do *ngFor
+import { FormsModule } from '@angular/forms'; //do <input>
 
 @Component({
   selector: 'app-osoba-cwiczaca',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './osoba-cwiczaca.component.html',
   styleUrl: './osoba-cwiczaca.component.css'
 })
@@ -20,6 +21,7 @@ export class OsobaCwiczacaComponent {
   poziomTreningowy: string;
   cel: string
   wymiaryCialaWCM: number[];
+  selected: number;
 
   constructor()
   {
@@ -34,5 +36,14 @@ export class OsobaCwiczacaComponent {
     this.poziomTreningowy = 'poczatkujacy';
     this.cel = 'utrzymanie';
     this.wymiaryCialaWCM = [90, 100, 90];
+    this.selected = -1;
+  }
+
+  select(wchich: number): void {
+    this.selected = wchich;
+  }
+
+  save(): void {
+    
   }
 }

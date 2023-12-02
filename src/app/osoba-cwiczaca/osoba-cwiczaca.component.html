@@ -15,9 +15,19 @@
     <p>Cel: {{cel}}</p>
     <div>Wymiary ciala w cm:
         <ul>
-            <li *ngFor="let wymiar of wymiaryCialaWCM">
+            <li *ngFor="let wymiar of wymiaryCialaWCM;index as i" (click)="select(i)" [class.selected]="i === selected">
                 {{wymiar}}
             </li>
         </ul>
+    </div>
+</section>
+
+<section *ngIf="selected > -1">
+    <h2>Edit:</h2>
+    <div>
+        <label>Wymiar:
+            <input [(ngModel)]="wymiaryCialaWCM[selected]"/>
+            <button (click)="save()">Save</button>
+        </label>
     </div>
 </section>
