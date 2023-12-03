@@ -4,11 +4,12 @@ import { OsobaCwiczacaComponent } from './osoba-cwiczaca/osoba-cwiczaca.componen
 
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
+import { HomepageComponent } from './homepage/homepage.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [OsobaCwiczacaComponent ,HomeComponent, CommonModule, RouterOutlet],
+  imports: [HomepageComponent ,OsobaCwiczacaComponent ,HomeComponent, CommonModule, RouterOutlet],
   template: `
     <main>
       <header class="brand-name">
