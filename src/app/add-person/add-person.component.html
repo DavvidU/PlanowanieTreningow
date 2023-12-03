@@ -1,0 +1,42 @@
+<div>
+    <div class="container">
+    </div>
+
+
+<p> Witaj </p>
+<table>
+<tr>
+  <td><label for="male"> Imie</label></td>
+  <td><input [value]="" (input) = "inputName($event)"required minlength="2" maxlength="30"></td>
+</tr>
+<tr>
+  <td><label for="male"> Naziwko</label></td>
+  <td><input [value]="" (input) = "inputSurname($event)"required minlength="2" maxlength="30"></td>
+</tr>
+<tr>
+  <td><label for="male"> Wzrost[cm]</label></td>
+  <td><input [value]="" (input) = "inputHeigh($event)"required min="100"></td>
+<tr>
+  <td><label for="male"> Waga[kg]</label></td>
+  <td><input [value]="" (input) = "inputWeight($event)" required min="30z"></td>
+<tr>
+  <td><label for="male"> Wiek</label></td>
+  <td><input [value]="" (input) = "inputAge($event)"></td>
+<tr>
+  <td><label for="male"> Płeć</label></td>
+  <td><input [value]="" (input) = "inputGender($event)"></td>
+<tr>
+  <td><label for="male"> Przeciwskazania</label></td>
+  <td><input [value]="" (input) = "inputContraindications($event)"></td>
+<tr>
+  <td><label for="male"> Poziom Treningowy</label></td>
+  <td><input [value]="" (input) = "inputTraningLvl($event)"></td>
+<tr>
+  <td><label for="male"> Cel</label></td>
+  <td><input [value]="" (input) = "inputGoal($event)"></td>
+<tr>
+  <td><label for="male"> Wymiar Ciała</label></td>
+  <td><input [value]="" (input) = "inputBodyDimensions($event)" required pattern="[0-100]+,[0-150]+,[0-150]+"></td>
+</table>
+<button type="submit"> Dodaj</button>
+</div>

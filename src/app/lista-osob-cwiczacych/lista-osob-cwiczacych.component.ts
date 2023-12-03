@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';  //do *ngFor
 import { FormsModule } from '@angular/forms'; //do <input>
 import { OsobaCwiczaca } from '../osoba-cwiczaca';
+import { AddPerson } from '../add-person/add-person.component';
 
 @Component({
   selector: 'app-lista-osob-cwiczacych',
@@ -10,10 +11,13 @@ import { OsobaCwiczaca } from '../osoba-cwiczaca';
   templateUrl: './lista-osob-cwiczacych.component.html',
   styleUrl: './lista-osob-cwiczacych.component.css'
 })
-export class ListaOsobCwiczacychComponent {
+export class ListaOsobCwiczacychComponent{
+
   wybranaOsoba: number = -1;
-  listaOsobCwiczacych: OsobaCwiczaca[] = [
-    {
+  listaOsobCwiczacych: AddPerson[] = [
+
+
+   /* {
       "id": 1,
       "imie": "Arnold",
       "nazwisko": "Szwarcnyger",
@@ -40,10 +44,32 @@ export class ListaOsobCwiczacychComponent {
       "cel": "reedukcja",
       "wymiaryCialaWCM": [7, 7, 7],
       "selected": -1
-    }
-    
+    }*/
+
+
   ]
+
+
+
   select(wchich: number): void {
     this.wybranaOsoba = wchich;
   }
+
+  /*dodajOsobe(): void {
+    const nowaOsoba: AddPerson = {
+      id: this.listaOsobCwiczacych.length + 1,
+      imie: this.imie,
+      nazwisko: this.nazwisko,
+      wzrost: this.wzrost,
+      waga: this.waga,
+      wiek: this.wiek,
+      plec: this.plec,
+      przeciwwskazania: this.przeciwwskazania,
+      poziomTreningowy: this.poziomTreningowy,
+      cel: this.cel,
+      wymiaryCialaWCM: this.wymiaryCialaWCM,
+      selected: -1
+    };
+    this.listaOsobCwiczacych.push(nowaOsoba);
+}*/
 }

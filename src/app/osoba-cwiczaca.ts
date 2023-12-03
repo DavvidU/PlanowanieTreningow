@@ -11,7 +11,7 @@ export class OsobaCwiczaca {
   cel: string
   wymiaryCialaWCM: number[];
   selected: number;
-
+  
   constructor()
   {
     this.id = 1;
